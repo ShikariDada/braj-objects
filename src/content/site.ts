@@ -1,7 +1,7 @@
 export const site = {
   brand: "Braj Objects",
   brandLine: "A Braj object archive",
-  url: "https://shikaridada.github.io/braj-objects",
+  url: "https://zerothlayer.com/braj-objects",
   heroTitle: "A piece of Braj, made to be kept.",
   heroStandfirst:
     "Numbered collectible magnets from Mathura and Braj — drawn from real places, made as objects worth keeping.",
