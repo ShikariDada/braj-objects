@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useCart } from "@/lib/commerce/CartContext";
 import { localAdapter } from "@/lib/commerce/localAdapter";
 import { Button } from "@/components/ui/Button";
@@ -12,6 +12,10 @@ export default function BagPage() {
   const { lines, setQuantity, remove, clear, subtotalNote } = useCart();
   const [checkout, setCheckout] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    document.title = "Bag · Braj Objects";
+  }, []);
 
   const beginCheckout = async () => {
     setError(null);

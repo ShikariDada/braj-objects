@@ -144,8 +144,8 @@ export function MagnetModel({
   const backMat = useMemo(
     () =>
       new THREE.MeshStandardMaterial({
-        color: "#1d1915",
-        roughness: 0.6,
+        color: "#38302a",
+        roughness: 0.62,
         metalness: 0.05,
       }),
     [],
@@ -165,7 +165,7 @@ export function MagnetModel({
   );
   const magnetMat = useMemo(
     () =>
-      new THREE.MeshStandardMaterial({ color: "#3c3c40", roughness: 0.35, metalness: 0.85 }),
+      new THREE.MeshStandardMaterial({ color: "#6e6e74", roughness: 0.42, metalness: 0.55 }),
     [],
   );
 

@@ -78,6 +78,10 @@ export function CanvasShell({
             intensity={preset.lighting.fillIntensity}
             color="#cfe0da"
           />
+          {/* Rear rim: the back plate + magnet disc face away from the key,
+              so without a rear source they read near-black. Low and neutral —
+              it reveals the disc edge without restyling the object. */}
+          <directionalLight position={[0.8, 0.6, -2.6]} intensity={1.1} color="#f2ead8" />
           <Suspense fallback={null}>
             <MagnetModel
               product={product}

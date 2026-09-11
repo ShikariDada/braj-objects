@@ -7,4 +7,9 @@
   width: 100% !important;
   height: 100% !important;
   touch-action: pan-y;
+  cursor: grab;
+}
+
+.stage canvas:active {
+  cursor: grabbing;
 }

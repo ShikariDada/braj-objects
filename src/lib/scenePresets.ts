@@ -90,7 +90,7 @@ export const scenePresets: Record<string, ScenePreset> = {
   pdpDefault: {
     id: "pdpDefault",
     product: { position: [0, 0, 0], rotation: [0.05, 0.35, 0], scale: 1 },
-    camera: { position: [0, 0.1, 3.2], target: [0, 0, 0], fov: 34 },
+    camera: { position: [0, 0.1, 3.65], target: [0, 0, 0], fov: 34 },
     lighting: {
       keyPosition: [2.4, 3.2, 3.4],
       keyIntensity: 2.4,
@@ -101,7 +101,7 @@ export const scenePresets: Record<string, ScenePreset> = {
   pdpBack: {
     id: "pdpBack",
     product: { position: [0, 0, 0], rotation: [0.05, Math.PI - 0.35, 0], scale: 1 },
-    camera: { position: [0, 0.1, 3.2], target: [0, 0, 0], fov: 34 },
+    camera: { position: [0, 0.1, 3.65], target: [0, 0, 0], fov: 34 },
     lighting: {
       keyPosition: [-2.4, 3.2, 3.4],
       keyIntensity: 2.4,

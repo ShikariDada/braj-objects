@@ -20,8 +20,8 @@ function LayerStack({ amount }: { amount: number }) {
       }),
       art: new THREE.MeshStandardMaterial({ color: "#9B4435", roughness: 0.5 }),
       body: new THREE.MeshStandardMaterial({ color: "#2b2521", roughness: 0.6 }),
-      back: new THREE.MeshStandardMaterial({ color: "#4a4238", roughness: 0.6 }),
-      magnet: new THREE.MeshStandardMaterial({ color: "#3c3c40", roughness: 0.35, metalness: 0.85 }),
+       back: new THREE.MeshStandardMaterial({ color: "#4a4238", roughness: 0.6 }),
+       magnet: new THREE.MeshStandardMaterial({ color: "#6e6e74", roughness: 0.42, metalness: 0.55 }),
     }),
     [],
   );
