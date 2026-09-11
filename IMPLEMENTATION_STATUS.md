@@ -22,3 +22,15 @@
 | 17 Cohesion + interaction polish | PASSED | 2026-09-11 | shared brass-thumb slider grammar; square view toggles; collection crossfade; hero spec line; packaging/PDP copy cleanup; 42/42 e2e |
 | 18 Stale-server incident + hero scroll | PASSED | 2026-09-11 | :3000 was a 04:53 production snapshot — killed, fresh build serving; hero scroll hint was a false promise, now a real scroll-linked zoom (ref-only, reduced-motion safe); all interactions re-verified live on :3000 |
 | 19 Permanent link (GitHub Pages) | PASSED | 2026-09-11 | https://zerothlayer.com/braj-objects/ — repo ShikariDada/braj-objects (main source, gh-pages static export via PAGES_EXPORT=1); full live verification incl. client nav, toggles, 3D, sliders, mobile; 42/42 e2e on normal build |
+
+## Republish recipe (permanent link)
+Run from repo root in PowerShell — rebuilds the static export and
+replaces the `gh-pages` branch content (source `main` is untouched):
+`$env:PAGES_EXPORT="1"; $env:NEXT_PUBLIC_BASE_PATH="/braj-objects"; npm run build`
+`git worktree add C:\Users\uditg\AppData\Local\Temp\opencode\gh-pages gh-pages`
+`git -C <worktree> rm -rf .` (tracked files only — leaves `.git` alone)
+copy `out\*` → worktree root (keep `.nojekyll`, keep flight `.txt` files)
+`git -C <worktree> add -A; git -C <worktree> commit -m "Publish …"; git -C <worktree> push origin gh-pages`
+Pages rebuilds automatically (~1 min). Never `Remove-Item -Force` the
+worktree dir itself — `-Force` also deletes `.git`; always remove via
+`git worktree remove --force`.
