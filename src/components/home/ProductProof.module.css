@@ -1,0 +1,33 @@
+.proof {
+  background: var(--paper-bright);
+  border-block: 1px solid var(--line);
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-10);
+}
+
+.head {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 640px;
+  margin-bottom: var(--space-7);
+}
+
+.head > p:first-child {
+  color: var(--sandstone-deep);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.grid figure {
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    align-items: start;
+  }
+}

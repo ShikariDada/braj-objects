@@ -1,0 +1,66 @@
+.t-display {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 480;
+  font-size: var(--text-display);
+  line-height: 1.02;
+  letter-spacing: -0.008em;
+  text-wrap: balance;
+}
+
+.t-h1 {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 480;
+  font-size: var(--text-3xl);
+  line-height: 1.05;
+  letter-spacing: -0.006em;
+  text-wrap: balance;
+}
+
+.t-h2 {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 500;
+  font-size: var(--text-2xl);
+  line-height: 1.1;
+  letter-spacing: -0.004em;
+  text-wrap: balance;
+}
+
+.t-h3 {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 540;
+  font-size: var(--text-xl);
+  line-height: 1.2;
+}
+
+.t-lede {
+  font-size: var(--text-lg);
+  line-height: 1.55;
+  max-width: 58ch;
+}
+
+.t-body {
+  font-size: var(--text-base);
+  line-height: 1.6;
+  max-width: 64ch;
+}
+
+.t-meta {
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+.t-micro {
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.t-nums {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.t-devanagari {
+  font-family: var(--font-body), "Anek Devanagari", system-ui, sans-serif;
+}

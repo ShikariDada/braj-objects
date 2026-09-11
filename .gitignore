@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+next-env.d.ts
+
+# TypeScript incremental info
+tsconfig.tsbuildinfo
+
+# Test artifacts
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Blender raw renders (large, regenerable via blender/render_products.py)
+blender/blender_out/
+
+# Env + OS
+.env*
+!.env.example
+.DS_Store
+Thumbs.db

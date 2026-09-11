@@ -1,0 +1,10 @@
+.stage {
+  position: absolute;
+  inset: 0;
+}
+
+.stage canvas {
+  width: 100% !important;
+  height: 100% !important;
+  touch-action: pan-y;
+}

@@ -1,0 +1,46 @@
+.braj {
+  background: var(--yamuna);
+  color: var(--paper);
+}
+
+.media img {
+  width: 100%;
+  height: clamp(240px, 42vw, 520px);
+  object-fit: cover;
+}
+
+.copy {
+  padding-top: var(--space-9);
+  padding-bottom: var(--space-10);
+  display: grid;
+  gap: var(--space-4);
+}
+
+.copy > p:first-child {
+  color: var(--paper);
+  opacity: 0.7;
+}
+
+.copy h2 {
+  max-width: 16ch;
+}
+
+.cols {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.cols p {
+  color: color-mix(in srgb, var(--paper) 86%, transparent);
+}
+
+.copy a {
+  color: var(--paper);
+}
+
+@media (min-width: 1024px) {
+  .cols {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+}

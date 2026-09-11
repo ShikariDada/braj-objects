@@ -1,0 +1,94 @@
+.hero {
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--line);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.meta {
+  display: flex;
+  gap: var(--space-5);
+  color: var(--ink-soft);
+}
+
+.meta p + p::before {
+  content: "·";
+  margin-right: var(--space-5);
+  color: var(--sandstone);
+}
+
+.stage {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  min-height: 320px;
+  /* Scroll-linked reveal: the object draws closer as the hero scrolls
+     out. Compositor-only transform, driven by --story (see hook). */
+  transform: scale(calc(1 + var(--story, 0) * 0.07));
+  will-change: transform;
+}
+
+.copy {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+}
+
+.cta {
+  margin-top: var(--space-3);
+}
+
+.spec {
+  color: var(--ink-soft);
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.scroll {
+  margin-top: var(--space-7);
+  padding-inline: var(--gutter);
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  /* Dissolves as the zoom takes over — the hint never lingers. */
+  opacity: calc(1 - var(--story, 0) * 3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage {
+    transform: none;
+    will-change: auto;
+  }
+  .scroll {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding-top: var(--space-8);
+  }
+  .grid {
+    grid-template-columns: 1fr 1.35fr;
+    grid-template-areas:
+      "meta stage"
+      "copy stage";
+    column-gap: var(--space-8);
+    align-items: start;
+  }
+  .meta {
+    grid-area: meta;
+  }
+  .stage {
+    grid-area: stage;
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+    margin-top: calc(-1 * var(--space-8));
+  }
+  .copy {
+    grid-area: copy;
+  }
+}

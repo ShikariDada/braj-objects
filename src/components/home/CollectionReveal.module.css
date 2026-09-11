@@ -1,0 +1,103 @@
+.section {
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-9);
+  border-top: 1px solid var(--line);
+}
+
+.head {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 620px;
+  margin-bottom: var(--space-7);
+}
+
+.head > p:first-child {
+  color: var(--sandstone-deep);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.index {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid var(--line-strong);
+}
+
+.row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  gap: var(--space-4);
+  align-items: baseline;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 16px 4px;
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+}
+
+.row[aria-current="true"] {
+  background: var(--paper-bright);
+  box-shadow: inset 3px 0 0 var(--sandstone);
+}
+
+.num {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.names {
+  display: grid;
+  gap: 2px;
+}
+
+.names strong {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: var(--text-lg);
+  font-weight: 540;
+}
+
+.names span {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.rowPrice {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.plate {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+  /* Collection assembly: the incoming plate crossfades once on switch.
+     Opacity only — no lift, no bounce. Reduced-motion kills it globally. */
+  animation: plateIn 520ms var(--ease-enter);
+}
+
+@keyframes plateIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.view {
+  font-size: var(--text-base);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-9);
+    align-items: start;
+  }
+}

@@ -1,0 +1,22 @@
+.block {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.status {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.message,
+.hint {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}

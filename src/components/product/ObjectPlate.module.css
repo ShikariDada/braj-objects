@@ -1,0 +1,30 @@
+.plate {
+  background: var(--paper-bright);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.plate img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.label {
+  border-top: 1px solid var(--line);
+  padding: 10px 14px;
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.fallback {
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-content: center;
+  gap: 8px;
+  text-align: center;
+  background: var(--paper-deep);
+  border: 1px solid var(--line-strong);
+  padding: var(--space-5);
+}

@@ -1,0 +1,70 @@
+.viewer {
+  position: relative;
+  min-height: inherit;
+}
+
+.views {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+  margin-bottom: var(--space-4);
+}
+
+.views button {
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  border-radius: 0;
+  padding: 8px 18px;
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+
+.views button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper-bright);
+  border-color: var(--ink);
+}
+
+.poster {
+  position: relative;
+  z-index: 1;
+  transition: opacity 500ms var(--ease-standard);
+}
+
+.faceNote {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  top: 52px;
+  z-index: 2;
+  transition: opacity 500ms var(--ease-standard);
+}
+
+.tap {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+  margin-top: var(--space-4);
+}
+
+.tap p {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.hint {
+  position: relative;
+  z-index: 3;
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}

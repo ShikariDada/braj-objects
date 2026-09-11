@@ -1,0 +1,16 @@
+.link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: var(--text-base);
+}
+
+.arrow {
+  transition: transform 180ms var(--ease-standard);
+}
+
+.link:hover .arrow {
+  transform: translateX(4px);
+}

@@ -1,0 +1,30 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 28px;
+  background: var(--ink);
+  color: var(--paper-bright);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius-control);
+  font-size: var(--text-base);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 160ms var(--ease-standard), color 160ms var(--ease-standard);
+}
+
+.button:hover {
+  background: var(--sandstone-deep);
+  border-color: var(--sandstone-deep);
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.button[data-variant="ghost"] {
+  background: transparent;
+  color: var(--ink);
+}
