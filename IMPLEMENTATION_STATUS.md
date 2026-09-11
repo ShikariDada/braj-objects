@@ -21,3 +21,4 @@
 | 16 Full-res Standard render pass | PASSED | 2026-09-11 | all 8 objects × 4 views (1400px, 64spp) + dusk re-rendered, webp recompressed |
 | 17 Cohesion + interaction polish | PASSED | 2026-09-11 | shared brass-thumb slider grammar; square view toggles; collection crossfade; hero spec line; packaging/PDP copy cleanup; 42/42 e2e |
 | 18 Stale-server incident + hero scroll | PASSED | 2026-09-11 | :3000 was a 04:53 production snapshot — killed, fresh build serving; hero scroll hint was a false promise, now a real scroll-linked zoom (ref-only, reduced-motion safe); all interactions re-verified live on :3000 |
+| 19 Permanent link (GitHub Pages) | PASSED | 2026-09-11 | https://zerothlayer.com/braj-objects/ — repo ShikariDada/braj-objects (main source, gh-pages static export via PAGES_EXPORT=1); full live verification incl. client nav, toggles, 3D, sliders, mobile; 42/42 e2e on normal build |
