@@ -21,13 +21,18 @@ export async function generateMetadata({
   const { slug } = await params;
   const p = getProduct(slug);
   if (!p) return { title: "Object not found" };
+  // posterUrl already carries NEXT_PUBLIC_BASE_PATH in export builds; strip
+  // it before joining with the absolute site URL so og:image has no doubled
+  // /braj-objects/braj-objects prefix.
+  const posterPath = p.posterUrl.replace(/^\/braj-objects(?=\/)/, "");
+  const posterAbsolute = `${site.url}${posterPath}`;
   return {
     title: `Braj Object ${p.objectNumber} — ${p.name}`,
     description: p.shortDescription,
     openGraph: {
       title: `Braj Object ${p.objectNumber} — ${p.name}`,
       description: p.shortDescription,
-      images: [{ url: `${site.url}${p.posterUrl}`, width: 800, height: 800 }],
+      images: [{ url: posterAbsolute, width: 800, height: 800 }],
     },
   };
 }
