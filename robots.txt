@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://shikaridada.github.io/braj-objects/sitemap.xml
+Sitemap: https://zerothlayer.com/braj-objects/sitemap.xml
